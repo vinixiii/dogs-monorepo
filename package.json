@@ -1,4 +1,27 @@
 {
   "name": "monorepo",
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.2.2",
+  "private": true,
+  "scripts": {
+    "appone:android": "yarn workspace AppOne android",
+    "appone:ios": "yarn workspace AppOne ios",
+    "appone:lint": "yarn workspace AppOne lint",
+    "appone:start": "yarn workspace AppOne start",
+    "appone:test": "yarn workspace AppOne test",
+    "apptwo:android": "yarn workspace AppTwo android",
+    "apptwo:ios": "yarn workspace AppTwo ios",
+    "apptwo:lint": "yarn workspace AppTwo lint",
+    "apptwo:start": "yarn workspace AppTwo start",
+    "apptwo:test": "yarn workspace AppTwo test"
+  },
+  "workspaces": [
+    "apps/*",
+    "modules/*"
+  ],
+  "devDependencies": {
+    "@react-native/eslint-config": "0.76.2",
+    "eslint": "8.19.0",
+    "prettier": "2.8.8",
+    "typescript": "5.0.4"
+  }
 }

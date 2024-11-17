@@ -1,0 +1,16 @@
+{
+  "name": "core",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "axios": "1.7.7"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-native": "0.76.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "yarn@4.2.2"
+}
