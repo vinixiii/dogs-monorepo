@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { FlatListProps, ListRenderItemInfo } from 'react-native';
+import { Separator } from 'ui';
 import DogCard from './components/DogCard';
 import { DogsFlatList } from './styles';
 
@@ -21,6 +22,7 @@ function DogsList({ dogImages, ...props }: DogsListProps) {
       data={dogImages}
       keyExtractor={imageUrl => imageUrl}
       renderItem={renderItem}
+      ItemSeparatorComponent={() => <Separator />}
     />
   );
 }

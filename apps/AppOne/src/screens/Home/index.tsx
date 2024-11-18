@@ -1,8 +1,8 @@
 import { CoreUseCases } from 'core';
-import React, { useCallback, useEffect, useState } from 'react';
-import { ListRenderItemInfo } from 'react-native';
-import { DogCard, Title } from 'ui';
-import { Container, DogsList } from './styles';
+import { DogsList } from 'dogs';
+import React, { useEffect, useState } from 'react';
+import { Title } from 'ui';
+import { Container } from './styles';
 
 const { getDogImagesUseCase } = CoreUseCases;
 
@@ -21,13 +21,6 @@ function Home(): React.JSX.Element {
     }
   };
 
-  const renderItem = useCallback(
-    ({ item: imageUrl }: ListRenderItemInfo<string>) => (
-      <DogCard imageUrl={imageUrl} />
-    ),
-    [],
-  );
-
   useEffect(() => {
     fetchDogImages();
   }, []);
@@ -35,9 +28,7 @@ function Home(): React.JSX.Element {
   return (
     <Container>
       <DogsList
-        data={dogImages}
-        keyExtractor={imageUrl => imageUrl}
-        renderItem={renderItem}
+        dogImages={dogImages}
         ListHeaderComponent={<Title>AppOne - {breed}</Title>}
       />
     </Container>
