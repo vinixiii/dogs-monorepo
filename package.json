@@ -17,11 +17,5 @@
   "workspaces": [
     "apps/*",
     "modules/*"
-  ],
-  "devDependencies": {
-    "@react-native/eslint-config": "0.76.2",
-    "eslint": "8.19.0",
-    "prettier": "2.8.8",
-    "typescript": "5.0.4"
-  }
+  ]
 }
